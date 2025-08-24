@@ -7,3 +7,4 @@ spotipy
 spotipy-anon
 requests
 requests[socks]
+audioop-lts
