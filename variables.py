@@ -37,11 +37,11 @@ info_message = '''This bot's whole open source is available in my github and all
 Developer's telegram channel:
 [https://t.me/ElJoker63](https://t.me/ElJoker63)
 
-Note: albums are downloaded faster than playlists and tracks are downloaded faster than albums.
+Note: albums are downloaded faster than playlists and tracks are downloaded faster than albums.'''
 
-You can support and motivate me to buy more servers for faster download by:
-• Giving a star in [github](https://github.com/arashnm80/spot-seek-bot)⭐🙂
-• Or subscribing to [my youtube](https://www.youtube.com/@Arashnm80)🔥❤️'''
+#You can support and motivate me to buy more servers for faster download by:
+#• Giving a star in [github](https://github.com/arashnm80/spot-seek-bot)⭐🙂
+#• Or subscribing to [my youtube](https://www.youtube.com/@Arashnm80)🔥❤️'''
 
 # message for /privacy command
 privacy_message = '''• This bot doesn't gather any info from the users
@@ -137,7 +137,7 @@ Join to get access to database, then send your link again.'''
 # spotify app - new gen (multiple apps to bypass limits)
 # template: a list of [spotify_client_id, spotify_client_secret]
 # start with only a single app and add to them as users count grows
-spotify_apps_list = os.environ.get("SPOTIFY_APPS_LIST", "[]")
+spotify_apps_list = os.environ.get("SPOTIFY_APPS_LIST", "[7adf4d4398cb4badb8dc49aaad932482, 5040be4508444ef189f56b166b9329b2]")
 spotify_apps_list = json.loads(spotify_apps_list)
 
 # spotdl
