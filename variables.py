@@ -5,15 +5,15 @@ import json
 import telebot
 
 # env variables
-bot_api = os.environ["SPOT_SEEK_BOT_API"]
-database_channel = os.environ["MUSIC_DATABASE_ID"]
+bot_api = os.environ.get("SPOT_SEEK_BOT_API", "7669997918:AAHzI14FqBTAFqBFOf3nL09T01z5higxjLo")
+database_channel = os.environ.get("MUSIC_DATABASE_ID", "-1001541941887")
 
 # initialize bot
 bot = telebot.TeleBot(bot_api)
 
 # bot name
-bot_name = "Spot Seek Bot"
-bot_username = "@SpotSeekBot"
+bot_name = "SpotDL"
+bot_username = "@ae_spotdl_bot"
 
 # message for /start command
 welcome_message = '''Hi😃👋
@@ -35,7 +35,7 @@ https://open.spotify.com/playlist/37i9dQZF1DWX4UlFW6EJPs
 info_message = '''This bot's whole open source is available in my github and all interested programmers are welcome to contribute and improve it.
 
 Developer's telegram channel:
-[https://t.me/Arashnm80_Channel](https://t.me/Arashnm80_Channel)
+[https://t.me/ElJoker63](https://t.me/ElJoker63)
 
 Note: albums are downloaded faster than playlists and tracks are downloaded faster than albums.
 
@@ -110,16 +110,16 @@ spotify_user_link_pattern = r'https?:\/\/open\.spotify\.com\/(intl-[a-zA-Z]{2}\/
 
 # log chanel
 log_bot_url = "https://api.telegram.org/bot" + bot_api + "/"
-log_channel_id = os.environ['LOG_CHANNEL_ID']
+log_channel_id = os.environ.get('LOG_CHANNEL_ID', '-1002578775069')
 
 # specify to use warp or not
 warp_mode = True
 
 # warp socks proxy
-warp_proxies = os.environ["WARP_PROXIES"]
-warp_proxies = json.loads(warp_proxies)
+#warp_proxies = os.environ.get("WARP_PROXIES", "")
+#warp_proxies = json.loads(warp_proxies)
 warp_session = requests.Session()
-warp_session.proxies.update(warp_proxies)
+#warp_session.proxies.update(warp_proxies)
 
 # percentage of playlist tracks to be downloaded (1 is all of them and 0 is none)
 playlist_download_rate = 0.5
@@ -129,20 +129,21 @@ playlist_download_rate = 0.5
 queue_handler_max_forwards_in_a_row = 10
 
 # promote channel
-promote_channel_username = "@Arashnm80_Channel"
-promote_channel_link = f"https://t.me/{promote_channel_username.lstrip('@')}"
+promote_channel_username = "-1002217698216"
+promote_channel_link = f"https://t.me/+43nGFsWX9vhkMzMx"
 not_subscribed_to_channel_message = '''Your link is correct✅.
 Join to get access to database, then send your link again.'''
 
 # spotify app - new gen (multiple apps to bypass limits)
 # template: a list of [spotify_client_id, spotify_client_secret]
 # start with only a single app and add to them as users count grows
-spotify_apps_list = os.environ["SPOTIFY_APPS_LIST"]
+spotify_apps_list = os.environ.get("SPOTIFY_APPS_LIST", "[]")
 spotify_apps_list = json.loads(spotify_apps_list)
 
 # spotdl
 spotdl_cache_path = "/root/.spotdl"
-spotdl_executable_link = "https://github.com/spotDL/spotify-downloader/releases/download/v4.2.11/spotdl-4.2.11-linux"
+spotdl_executable_link = "https://github.com/spotDL/spotify-downloader/releases/download/v4.4.1/spotdl-4.4.1-linux"
+#spotdl_executable_link = "https://github.com/spotDL/spotify-downloader/releases/download/v4.2.11/spotdl-4.2.11-linux"
 
 # database csv columns
 db_time_column = 0
