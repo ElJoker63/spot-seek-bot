@@ -137,7 +137,7 @@ Join to get access to database, then send your link again.'''
 # spotify app - new gen (multiple apps to bypass limits)
 # template: a list of [spotify_client_id, spotify_client_secret]
 # start with only a single app and add to them as users count grows
-spotify_apps_list = os.environ.get("SPOTIFY_APPS_LIST", "[7adf4d4398cb4badb8dc49aaad932482, 5040be4508444ef189f56b166b9329b2]")
+spotify_apps_list = os.environ.get("SPOTIFY_APPS_LIST", '[["7adf4d4398cb4badb8dc49aaad932482", "5040be4508444ef189f56b166b9329b2"]]')
 spotify_apps_list = json.loads(spotify_apps_list)
 
 # spotdl
